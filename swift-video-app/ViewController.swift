@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import AVKit
 
-class ViewController: UIViewController {
+class ViewController: AVPlayerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let url = URL(string: "https://stream.mux.com/qxb01i6T202018GFS02vp9RIe01icTcDCjVzQpmaB00CUisJ4.m3u8")
+        player = AVPlayer(url: url!)
+        super.viewDidLoad()
+        player!.play()
     }
 
 
